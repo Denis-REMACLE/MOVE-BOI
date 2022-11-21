@@ -30,7 +30,7 @@ func main() {
 	is_exercise_day := doesElementExist(exercise_days, time.Now().Weekday().String())
 
 	for {
-		time.Sleep(time.Second)
+		time.Sleep(time.Hour)
 		hours, _, _ := time.Now().Clock()
 		if (hours == breaktime){
 			notify.Push("GO EAT !", "and remember gluttony is bad for you !", "/etc/move-boi/biceps.png", notificator.UR_CRITICAL)
