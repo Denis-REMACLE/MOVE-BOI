@@ -19,14 +19,17 @@ func main() {
 		AppName:     "MOVE BOI",
 	})
 
+	// Modify here the exercises, reps, sets, messages and exercice days
+	// Please keep the number of exercises, pauses and phrases equal
 	reps := "8"
 	sets := "3"
-	exercises := [5]string{"Push ups", "Crunches", "Plank", "Squats", "Dynamic Lunges"}
-	pauses := [5]string{"Go breathe some fresh air !", "Read from a book !", "Jot some ideas down !", "Solve a rubiks !", "Go make yourself a coffee !"}
-	phrases := [5]string{"TIME TO MOVE BOI !", "I'LL MAKE YOU MOVE !", "STAND UP AND EXERCISE !", "NO PAIN ! NO GAIN !", "YOU CAN DO IT !"}
+	exercises := []string{"Push ups", "Crunches", "Plank", "Squats", "Dynamic Lunges"}
+	pauses := []string{"Go breathe some fresh air !", "Read from a book !", "Jot some ideas down !", "Solve a rubiks !", "Go make yourself a coffee !"}
+	phrases := []string{"TIME TO MOVE BOI !", "I'LL MAKE YOU MOVE !", "STAND UP AND EXERCISE !", "NO PAIN ! NO GAIN !", "YOU CAN DO IT !"}
 	exercise_days := []string{"Monday", "Wednesday", "Friday"}
-	countdown := 5
+	countdown := len(exercises)
 	breaktime := 12
+
 	is_exercise_day := doesElementExist(exercise_days, time.Now().Weekday().String())
 
 	for {
